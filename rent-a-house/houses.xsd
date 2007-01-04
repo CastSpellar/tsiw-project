@@ -1,22 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- INCLUDES -->
+    <xs:include schemaLocation="rooms.xsd"/>
+    
+    <!-- CASAS -->
     <xs:element name="houses">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="house">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="type" type="xs:string"/>
-                            <xs:element name="location" type="xs:string"/>
+                            <xs:element name="reference" type="xs:int"/>
+                            <xs:element name="location" type="typeLocation"/>
+                            <xs:element name="situation" type="xs:string"/>
+                            <xs:element name="condition" type="typeCondition"/>
+                            <xs:element name="type" type="typeRent"/>
                             <xs:element name="area" type="xs:int"/>
-                            <xs:element name="divisions"/>
+                            <!--  -->
+                            <xs:element name="rooms" type="typeRoom"/>
+                            <xs:element name="facilities"/>
+                            
+                            <xs:element name="personsAllowed" type="xs:int"/>
+                            <xs:element name="roomMateAllowed" type="xs:boolean"/>
+                            <xs:element name="petsAllowed" type="xs:boolean"/>
+                            <xs:element name="childrenAllowed" type="xs:boolean"/>
+                            <xs:element name="smokingAllowed" type="xs:boolean"/>
+                            <xs:element name="livingRoom" type="xs:boolean"/>
+                            
+                            <!--  -->
+                            <xs:element name="comunityOptions"/>
+                            <xs:element name="transportOptions" type="typeTransport"/>
                             <xs:element name="furniture" type="xs:boolean"/>
-                            <xs:element name="utilities"/>
-                            <xs:element name="price"/>
+                            
+                            
+                            <xs:element name="deposit" type="xs:int"/>
+                            <xs:element name="price" type="xs:int"/>
+                            <xs:element name="availability" type="typeDuration"/>
+                            <xs:element name="duration" type="xs:int"/>
+                            <xs:element name="others"/>
+                            <xs:element name="comments"/>
+                            <xs:element name="picture"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+    
+    <xs:complexType name="typeDuration">
+        <xs:sequence minOccurs="1">
+            <xs:element name="from" type="xs:date"/>
+            <xs:element name="to" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="typeLocation">
+        <xs:sequence minOccurs="1">
+            <xs:element name="country" type="xs:date"/>
+            <xs:element name="region" type="xs:date"/>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="district" type="xs:string"/>
+            <xs:element name="comments" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="typeRent">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Room"/>
+            <xs:enumeration value="Flat"/>
+            <xs:enumeration value="House"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="typeCondition">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Very Poor"/>
+            <xs:enumeration value="Poor"/>
+            <xs:enumeration value="Reasonable"/>
+            <xs:enumeration value="Good"/>
+            <xs:enumeration value="Very Good"/>
+            <xs:enumeration value="Excelent"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="typeTransport">
+        <xs:sequence>
+            <xs:element name="BUS" type="xs:boolean"/>
+            <xs:element name="subway_Metro" type="xs:boolean"/>
+            <xs:element name="train" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
 </xs:schema>
