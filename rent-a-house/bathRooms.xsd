@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="bathRoom">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="area" type="xs:int"/>
+                <xs:element name="bathFacilities" type="typeBathFacilities"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="typeBathFacilities">
+        <xs:sequence>
+            <xs:element name="shower" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="bathing-tub" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="jacuzzi" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="sauna" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="toilet" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="bide" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="comment" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
