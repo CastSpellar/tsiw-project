@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rooms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="file:/C:/workspace/rent-a-house/rooms.xsd">
+    <room>
+        <area>20</area>
+        <beds>
+            <numberBeds>2</numberBeds>
+            <bedType>Cabin</bedType>
+            <bedType>Couple</bedType>
+        </beds>
+        <bathRoom>
+            <shower>true</shower>
+            <bathing-tub>true</bathing-tub>
+            <toilet>true</toilet>
+            <bide>true</bide>
+            <comment>Um quarto bué fixe</comment>
+        </bathRoom>
+        <roomFurniture>
+            <TV>TV</TV>
+            <wardrobe number="2"></wardrobe>
+        </roomFurniture>
+    </room>
+    
+    <room>
+        <area>20</area>
+        <beds>
+            <numberBeds>2</numberBeds>
+            <bedType>Cabin</bedType>
+            <bedType>Couple</bedType>
+        </beds>
+        <roomFurniture>
+            <wardrobe number="1"/>
+        </roomFurniture>
+    </room>
+</rooms>
