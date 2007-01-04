@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <xs:element name="furnitures" type="typeFurniture"/>
+
+    <xs:complexType name="typeFurniture">
+        <xs:sequence>
+            <xs:element name="TV" type="typeTV" minOccurs="0"/>
+            <xs:element name="wardrobe" type="typeWardrobe" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="typeTV">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="TV"/>
+            <xs:enumeration value="Plasma"/>
+            <xs:enumeration value="LCD"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="typeWardrobe">
+        <xs:attribute name="number"/>
+    </xs:complexType>
+</xs:schema>

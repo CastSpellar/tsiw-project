@@ -1,16 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:beds="beds">
-<xs:element name="rooms">
-    <xs:complexType>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:include schemaLocation="bathRoom.xsd"/>
+    <xs:include schemaLocation="furniture.xsd"/>
+ 
+    <xs:element name="rooms">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="room" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="area" type="xs:int"/>
+                            <xs:element name="beds" type="typeBed"/>
+                            <xs:element name="bathRoom" type="typeBathFacilities" minOccurs="0"/>
+                            <xs:element name="roomFurniture" type="typeFurniture"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="typeBed">
         <xs:sequence>
-            <xs:element name="room">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="beds"></xs:element>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
+            <xs:element name="numberBeds" type="xs:int"/>
+            <xs:element name="bedType" type="typeTypeBed" maxOccurs="unbounded"></xs:element>
         </xs:sequence>
     </xs:complexType>
-</xs:element>
+    
+    <xs:simpleType name="typeTypeBed">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Single"/>
+            <xs:enumeration value="Couple"/>
+            <xs:enumeration value="Cabin"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>
