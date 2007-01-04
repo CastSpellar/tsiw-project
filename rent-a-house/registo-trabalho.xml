@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trabalho xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="trabalho.xsd" grupo="G02" tipoTrabalho="TI">
+    <titulo>rent-a-house.com</titulo>
+    <resumo>The objective of this project is to create a portal based in XML Technologies.
+        The main purpose of the portal is to help students and academics (teachers, educating staff, PhD students,
+            internships, traineeships, etc)to search for a house to rent. At the end, it will be possible to find and submit houses to rent.
+            Using XML with a database-driven dynamic website we hope to make it possible to cleanly separate
+            the site's content, style and programming logic.</resumo>
+    <lista tipoLista="Description">
+        <item>Multi-Language Site</item>
+        <item>XML on the Server, the  web server stores the XML documents for all the web pages
+              and transforms them into HTML on the fly</item>
+        <item>The website will have a master document that provides share content and a site directory.
+            The master document represents a new document type, with its a root element type different 
+            from that of a page document, and most other element types usable only in the master document.</item>
+        <item>We will use one XML Schema to validate both the master documents and page documents</item>
+        <item>The schema will be broken into three parts. One tests the master documents, another tests
+              page documents and the last one tests constructs that occur in both document types(links,images 
+              and text markup)</item>      
+        <item>The website will be composed by two sources. The two sources will be combined by the dynamic
+              website engine to produce the final browser-viewable webpages.
+              The first source is the dynamic content, usually stored in the eXist Database.
+              The second source is static(although it will be stored in the eXist database).This source
+              will supply the XML templates into which the dynamic values are inserted. These change only if the 
+              site designer decides to change them.</item>
+        <item>Website Backoffice Management</item>
+        <item>Users Profile Management in the Backoffice</item>
+        <item>Website dynamic layout management using XSLT transformations and XML template fragments.</item>
+        <item>Using predefined XML documents we will allow
+            to create another XML documents using XSLT with XML-Schema validation, for example, we will
+            have the house concept. Almost every house is different from other houses, so, to construct one house
+            document we will need to combine different XML fragment documents like kitchens, living 
+            rooms, bathrooms, etc and then, voia lá... we have a unique house!</item>
+        <item>The dynamic part of the website it's supported by XQuery queries in the eXist database.</item>
+        <item>User Registration</item>
+        <item>Different type of users: Renters and HouseOwners.</item>
+        <item>Users can construct their own houses or select pre-defined houses(T1, T2, etc)</item>
+        <item>HouseOwners can Manage their Houses Profile.</item>
+        <item>HouseOwners can have more than one houses to Rent</item>
+        <item>HouseOwners can submit photos of the houses and their coordinates.</item>
+        <item>Renters can specify their wishes, sit back and receive matches.</item>
+        <item>Renters can search houses by number of rooms, city area, City, price, etc.</item>
+        <item>Renters can view the house location in the google maps.</item>
+        <item>Renters can comment and rating houses.</item>
+        <item>Houses will have ratings by users and by site administrators.</item>
+        <item>The main page will have one area for the "Latest Houses".</item>
+        <item>The generated HTML documents will be tunned with static CSS and JavaScript documents.</item>
+        <item>The website will be supported by Apache Tomcat Servlet Engine</item>
+    </lista>
+    <lista tipoLista="Tasks">
+        <item>Lecture of all the references</item>
+        <item>Definition of all the requirements</item>
+        <item>Definition of the XML Schema</item>
+        <item>Definition of all the vocabularies</item>
+        <item>Construction of the website master document</item>
+        <item>Definition of transformation types that will be used</item>
+        <item>Layout definiton</item>
+        <item>Creation of XSLT to process transformations</item>
+        <item>Development of the Portal</item>
+        <item>Development of the backoffice.</item>
+        <item>Integration of Google Maps in the website.</item>
+	    <item>Elaboration of the report</item>
+        <item></item>
+    </lista>
+    <lista tipoLista="Goals">
+        <item>XML Technologies based site.</item>
+        <item>Design XML Schemas to interpret the XML vocabulary</item>
+        <item>Design XSLT to process the documents</item>
+        <item>Use of XQuery to query the eXist database</item>
+        <item>Integrate JSP with XML technologies</item>
+        <item>Integrate WebServices such as Google API's</item>
+    </lista>
+    <lista tipoLista="References">
+        <item>XML in a Nutshell, Third Edition </item>
+        <item>XSLT 2.0 Web Development</item>
+    </lista>
+    <lista tipoLista="Software">
+        <item href="http://www.eclipse.org/">Eclipse SDK</item>
+        <item href="http://www.oxygenxml.com/">oXygen XML plugin for Eclipse</item>
+        <item href="http://exist.sourceforge.net">eXist - Open Source native XML database</item>
+        <item href="http://tomcat.apache.org/index.html">Apache Tomcat Servlet Engine</item>
+        <item href="http://java.sun.com/j2se/1.5.0/">Java 2 SE 5.0</item>
+    </lista>
+    <lista tipoLista="Development">
+        <item href="http://code.google.com/p/tsiw-project/">Project Repository</item>
+    </lista>
+</trabalho>
