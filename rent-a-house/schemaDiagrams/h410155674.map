@@ -1,0 +1,26 @@
+<map xmlns='http://www.w3.org/1999/xhtml' name='h410155674'>
+ <area
+  shape='rect'
+  alt='h-1787900190'
+  coords='453,33,532,56'
+  href='rooms.xsd.html#h-1787900190'/>
+
+ <area
+  shape='rect'
+  alt='h-327268141'
+  coords='453,66,558,102'
+  href='bathRooms.xsd.html#h-327268141'/>
+
+ <area
+  shape='rect'
+  alt='h-1219781229'
+  coords='453,112,577,135'
+  href='furniture.xsd.html#h-1219781229'/>
+
+ <area
+  shape='rect'
+  alt='h-2103340800'
+  coords='453,145,573,181'
+  href='facilities.xsd.html#h-2103340800'/>
+
+</map>

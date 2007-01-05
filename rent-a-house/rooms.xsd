@@ -23,11 +23,13 @@
                             <xs:element name="bathRoom" type="typeBathFacilities" minOccurs="0"/>
                             <xs:element name="roomFurniture" type="typeFurniture"/>
                             <xs:element name="roomFacilities" type="typeFacilities" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="options" type="typeOptions" minOccurs="0"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
+
 
     <xs:complexType name="typeBed">
         <xs:sequence>
@@ -43,4 +45,17 @@
             <xs:enumeration value="Cabin"/>
         </xs:restriction>
     </xs:simpleType>
+    
+    <xs:complexType name="typeOptions">
+        <xs:sequence>
+            <xs:element name="personsAllowed" type="xs:int"/>
+            <xs:element name="roomMateAllowed" type="xs:boolean"/>
+            <xs:element name="petsAllowed" type="xs:boolean"/>
+            <xs:element name="childrenAllowed" type="xs:boolean"/>
+            <xs:element name="smokingAllowed" type="xs:boolean"/>
+            <xs:element name="livingRoom" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+    
 </xs:schema>
+

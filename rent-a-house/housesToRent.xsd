@@ -4,7 +4,7 @@
     <xs:include schemaLocation="rooms.xsd"/>
     
     <!-- CASAS -->
-    <xs:element name="houses">
+    <xs:element name="housesToRent">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="house">
@@ -17,15 +17,10 @@
                             <xs:element name="type" type="typeRent"/>
                             <xs:element name="area" type="xs:int"/>
                             <!--  -->
-                            <xs:element name="rooms" type="typeRoom"/>
-                            <xs:element name="facilities"/>
                             
-                            <xs:element name="personsAllowed" type="xs:int"/>
-                            <xs:element name="roomMateAllowed" type="xs:boolean"/>
-                            <xs:element name="petsAllowed" type="xs:boolean"/>
-                            <xs:element name="childrenAllowed" type="xs:boolean"/>
-                            <xs:element name="smokingAllowed" type="xs:boolean"/>
-                            <xs:element name="livingRoom" type="xs:boolean"/>
+                            <xs:element name="rooms" type="typeRoom"/>
+                            
+                            <xs:element name="facilities" type="typeFacilities"/>
                             
                             <!--  -->
                             <xs:element name="comunityOptions" type="comunityOptionsType"/>
