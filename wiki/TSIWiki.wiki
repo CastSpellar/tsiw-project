@@ -1,8 +1,8 @@
 = Title =
-rent-a-house.com
+=== rent-a-house.com ===
 
 == Abstract ==
- 	* The objective of this project is to create a portal based in XML Technologies. The main purpose of the portal is to help students and academics (teachers, educating staff, PhD students, internships, traineeships, etc)to search for a house to rent. At the end, it will be possible to find and submit houses to rent. Using XML with a database-driven dynamic website we hope to make it possible to cleanly separate the site's content, style and programming logic.
+ 	The objective of this project is to create a portal based in XML Technologies. The main purpose of the portal is to help students and academics (teachers, educating staff, PhD students, internships, traineeships, etc)to search for a house to rent. At the end, it will be possible to find and submit houses to rent. Using XML with a database-driven dynamic website we hope to make it possible to cleanly separate the site's content, style and programming logic.
 
 == Description == 
 	* Multi-Language Site
