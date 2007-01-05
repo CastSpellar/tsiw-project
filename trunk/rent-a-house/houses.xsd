@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <xs:include schemaLocation="rooms.xsd"/>
+    <xs:include schemaLocation="kitchens.xsd"/>
+    <xs:include schemaLocation="livingRooms.xsd"/>
+    
+    <xs:complexType name="typeHouses">
+        <xs:sequence>
+            <xs:element name="rooms" type="typeRoom"/>
+            <xs:element name="kitchen" type="typeKitchen"/>
+            <xs:element name="bathroom" type="typeBathRoom"/>
+            <xs:element name="livingRoom" type="typeLivingRoom"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

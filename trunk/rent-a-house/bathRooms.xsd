@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="bathRoom">
+
+    <xs:element name="bathRooms">
         <xs:complexType>
+            <xs:sequence>
+                <xs:element name="bathRoom" type="typeBathRoom" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+        <xs:complexType name="typeBathRoom">
             <xs:sequence>
                 <xs:element name="area" type="xs:int"/>
                 <xs:element name="bathFacilities" type="typeBathFacilities"/>
             </xs:sequence>
         </xs:complexType>
-    </xs:element>
+
     
     <xs:complexType name="typeBathFacilities">
         <xs:sequence>
