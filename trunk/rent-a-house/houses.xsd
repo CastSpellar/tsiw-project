@@ -28,7 +28,7 @@
                             <xs:element name="livingRoom" type="xs:boolean"/>
                             
                             <!--  -->
-                            <xs:element name="comunityOptions"/>
+                            <xs:element name="comunityOptions" type="comunityOptionsType"/>
                             <xs:element name="transportOptions" type="typeTransport"/>
                             <xs:element name="furniture" type="xs:boolean"/>
                             
@@ -56,8 +56,8 @@
     
     <xs:complexType name="typeLocation">
         <xs:sequence minOccurs="1">
-            <xs:element name="country" type="xs:date"/>
-            <xs:element name="region" type="xs:date"/>
+            <xs:element name="country" type="xs:string"/>
+            <xs:element name="region" type="xs:string"/>
             <xs:element name="city" type="xs:string"/>
             <xs:element name="district" type="xs:string"/>
             <xs:element name="comments" type="xs:string"/>
@@ -88,6 +88,17 @@
             <xs:element name="BUS" type="xs:boolean"/>
             <xs:element name="subway_Metro" type="xs:boolean"/>
             <xs:element name="train" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="comunityOptionsType">
+        <xs:sequence>
+            <xs:element name="Supermarket" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="Bakery" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="Butchery" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="CoffeShop" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="ShoppingCenter" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="Cinema" type="xs:boolean" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>
