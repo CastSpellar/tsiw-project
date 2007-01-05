@@ -4,7 +4,7 @@
 == Abstract ==
  	The objective of this project is to create a portal based in XML Technologies. The main purpose of the portal is to help students and academics (teachers, educating staff, PhD students, internships, traineeships, etc)to search for a house to rent. At the end, it will be possible to find and submit houses to rent. Using XML with a database-driven dynamic website we hope to make it possible to cleanly separate the site's content, style and programming logic.
 
-== Description == 
+== Description ==
 	* Multi-Language Site
 	* XML on the Server, the web server stores the XML documents for all the web pages and transforms them into HTML on the fly
 	* The website will have a master document that provides share content and a site directory. The master document represents a new document type, with its a root element type different from that of a page document, and most other element types usable only in the master document.
@@ -32,8 +32,7 @@
 	* The website will be supported by Apache Tomcat Servlet Engine
 
 == Tasks ==
-
- 	# Lecture of all the references
+	# Lecture of all the references
 	# Definition of all the requirements
 	# Definition of the XML Schema
 	# Definition of all the vocabularies
@@ -57,7 +56,7 @@
 
 == References ==
  	* XML in a Nutshell, Third Edition
-	* XSLT 2.0 Web Development
+ 	* XSLT 2.0 Web Development
 
 == Software ==
 	* Eclipse SDK
@@ -65,3 +64,6 @@
 	* eXist - Open Source native XML database
 	* Apache Tomcat Servlet Engine
 	* Java 2 SE 5.0
+
+
+
