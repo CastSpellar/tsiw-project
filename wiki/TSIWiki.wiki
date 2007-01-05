@@ -32,6 +32,7 @@ rent-a-house.com
 	* The website will be supported by Apache Tomcat Servlet Engine
 
 == Tasks ==
+
  	# Lecture of all the references
 	# Definition of all the requirements
 	# Definition of the XML Schema
@@ -46,6 +47,7 @@ rent-a-house.com
 	# Elaboration of the report
 	
 == Goals ==
+
 	* XML Technologies based site.
 	* Design XML Schemas to interpret the XML vocabulary
 	* Design XSLT to process the documents
