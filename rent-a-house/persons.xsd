@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+    <xs:complexType name="personsType">
+        <xs:sequence>
+            <xs:element name="title" type="typeTitle"/>
+            <xs:element name="fullName" type="typeFullName"/>
+            <xs:element name="gender" type="typeGender"/>
+            <xs:element name="nationality" type="xs:string"/>
+            <xs:element name="birthdate" type="xs:date"/>
+            <xs:element name="address" type="typeAddress"/>
+            <xs:element name="phones" type="typePhone"/>
+            <xs:element name="email" type="typeEmail"/>
+            <xs:element name="msnMessenger" type="typeEmail"/>
+            <xs:element name="education" type="typeEducation"/>
+            <xs:element name="fieldStudy" type="typeFieldStudy" />
+            <xs:element name="occupation" type="xs:string"/>
+            <xs:element name="workPlace" type="xs:string"/>
+            <xs:element name="smoker" type="xs:boolean"/>
+            <xs:element name="othre" type="xs:string"/>
+            
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="typeFullName">
+        <xs:sequence>
+            <xs:sequence>
+                <xs:element name="firstName" type="xs:string" minOccurs="1"/>
+                <xs:element name="middlefirstName" type="xs:string" minOccurs="1"/>
+                <xs:element name="lastName" type="xs:string" minOccurs="1"/>
+            </xs:sequence>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="typeTitle">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Mr."/>
+            <xs:enumeration value="Eng."/>
+            <xs:enumeration value="Dr."/>
+            <xs:enumeration value="Mrs."/>
+            <xs:enumeration value="Miss"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="typeGender">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Male"/>
+            <xs:enumeration value="Female"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="typeAddress">
+        <xs:sequence>
+            <xs:element name="Country" type="xs:string"/>
+            <xs:element name="City" type="xs:string"/>
+            <xs:element name="Adress" type="xs:string"/>
+            <xs:element name="PostCode" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="typePhone">
+        <xs:sequence>
+            <xs:element name="phone" type="typeTypePhone"/>
+            <xs:element name="mobile" type="typeTypePhone"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="typeTypePhone">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\+(\d{12}|\d{11})"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="typeEmail">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="typeEducation">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Bsc"/>
+            <xs:enumeration value="Phd"/>
+            <xs:enumeration value="Msc"/>
+            <xs:enumeration value="High School"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="typeFieldStudy">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Computer Science"/>
+            <xs:enumeration value="Chemistry"/>
+            <xs:enumeration value="Physics"/>
+            <xs:enumeration value="Mathematics"/>
+            <xs:enumeration value="Law"/>
+            <xs:enumeration value="Arts"/>
+            <xs:enumeration value="Economics"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>

@@ -1,4 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+    <xs:include schemaLocation="rooms.xsd"/>
+    <xs:include schemaLocation="kitchens.xsd"/>
+    <xs:include schemaLocation="livingRooms.xsd"/>
+    
+
+    <xs:complexType name="typeFlats" mixed="true">
+        <xs:choice>
+            <xs:element name="T0" type="typeT0"/>
+            <xs:element name="T1" type="typeT1"/>
+            <xs:element name="T2" type="typeT2"/>
+            <xs:element name="T3" type="typeT3"/>
+        </xs:choice>
+    </xs:complexType>
+
+    
+    <!-- TIPO T0 -->
+    <xs:complexType name="typeT0">
+        <xs:sequence>
+            <xs:element name="rooms" type="typeRoom" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="kitchen" type="typeKitchen"/>
+            <xs:element name="bathroom" type="typeBathRoom"/>
+        </xs:sequence>
+        <xs:attribute name="reference" use="required" type="xs:ID"/>
+    </xs:complexType>
+    
+    <!-- TIPO T1 -->
+    <xs:complexType name="typeT1">
+        <xs:sequence>
+            <xs:element name="rooms" type="typeRoom" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="kitchen" type="typeKitchen"/>
+            <xs:element name="bathroom" type="typeBathRoom"/>
+            <xs:element name="livingRoom" type="typeLivingRoom"/>
+        </xs:sequence>
+        <xs:attribute name="reference" use="required" type="xs:ID"/>
+    </xs:complexType>
+    
+    <!-- TIPO T2 -->
+    <xs:complexType name="typeT2">
+        <xs:sequence>
+            <xs:element name="rooms" type="typeRoom" minOccurs="2" maxOccurs="2"/>
+            <xs:element name="kitchen" type="typeKitchen"/>
+            <xs:element name="bathroom" type="typeBathRoom"/>
+            <xs:element name="livingRoom" type="typeLivingRoom"/>
+        </xs:sequence>
+        <xs:attribute name="reference" use="required" type="xs:ID"/>
+    </xs:complexType>
+    
+    <!-- TIPO T3 -->
+    <xs:complexType name="typeT3">
+        <xs:sequence>
+            <xs:element name="rooms" type="typeRoom" minOccurs="3" maxOccurs="3"/>
+            <xs:element name="kitchen" type="typeKitchen"/>
+            <xs:element name="bathroom" type="typeBathRoom"/>
+            <xs:element name="livingRoom" type="typeLivingRoom"/>
+        </xs:sequence>
+        <xs:attribute name="reference" use="required" type="xs:ID"/>
+    </xs:complexType>
+    
 </xs:schema>

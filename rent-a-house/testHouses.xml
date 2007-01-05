@@ -12,27 +12,7 @@
         </location>
         <situation>Center</situation>
         <condition>Good</condition>
-        <type>Flat</type>
-        <area>20</area>
-        <rooms>
-            <room>
-                <area>10</area>
-                <beds numberBeds="2">
-                    <bedType>Cabin</bedType>
-                </beds>
-                <bathRoom>
-                    <toilet>true</toilet>
-                </bathRoom>
-                <roomFurniture>
-                    <wardrobe number="2"/>
-                </roomFurniture>
-                <roomFacilities>
-                    <Internet>true</Internet>
-                    <airCondition>true</airCondition>
-                    <balconyTerrace>true</balconyTerrace>
-                </roomFacilities>
-            </room>
-        </rooms>
+        <type></type>
         <facilities>
             <Internet>true</Internet>
             <centralHeating>true</centralHeating>

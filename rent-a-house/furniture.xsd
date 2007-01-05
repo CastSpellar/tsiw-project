@@ -10,7 +10,7 @@
     </xs:complexType>
     
     <xs:complexType name="typeWardrobe">
-        <xs:attribute name="number"/>
+        <xs:attribute use="required" name="number"/>
     </xs:complexType>
     
 </xs:schema>

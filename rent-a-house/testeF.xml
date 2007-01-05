@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<housesToRent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="file:/C:/workspace/rent-a-house/housesToRent.xsd">
+    <house reference="01">
+        <location>
+            <country>Portugal</country>
+            <region>Centro</region>
+            <city>Lisboa</city>
+            <district>Expo</district>
+            <comments>Cada do Best</comments>
+        </location>
+        <situation>Center</situation>
+        <condition>Good</condition>
+        <area>145</area>
+        <type>
+            <flat>
+                <T1 reference="ID11">
+                    <rooms>
+                        <room>
+                            <area>50</area>
+                            <beds>
+                                <bedType >Cabin</bedType>
+                            </beds>
+                            <roomFurniture></roomFurniture>
+                        </room>
+                    </rooms>
+                    <kitchen>
+                        <area>10</area>
+                        <furniture>1</furniture>
+                        <housewares>1</housewares>
+                    </kitchen>
+                    <bathroom>
+                        <area>20</area>
+                        <bathFacilities></bathFacilities>
+                    </bathroom>
+                    <livingRoom>
+                        <area>100</area>
+                        <furniture>
+                           <wardrobe number="1"/>
+                        </furniture>
+                        <facilities>
+                            <Internet>true</Internet>
+                        </facilities>
+                    </livingRoom>
+                </T1>
+            </flat>
+        </type>   
+        <facilities>
+            <Internet>true</Internet>
+            <airCondition>true</airCondition>
+            <balconyTerrace>true</balconyTerrace>
+        </facilities>
+        <comunityOptions></comunityOptions>
+        <transportOptions>
+            <BUS>true</BUS>
+            <subway_Metro>false</subway_Metro>
+            <train>false</train>
+        </transportOptions>
+        <furniture>true</furniture>
+        <deposit>100</deposit>
+        <price>200</price>
+        <availability>
+            <from>2007-01-01</from>
+            <to>2007-09-01</to>
+        </availability>
+        <duration>12</duration>
+        <others></others>
+        <comments></comments>
+        <picture></picture>
+    </house>
+</housesToRent>
