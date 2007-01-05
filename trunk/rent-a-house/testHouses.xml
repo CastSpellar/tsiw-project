@@ -33,7 +33,13 @@
                 </roomFacilities>
             </room>
         </rooms>
-        <facilities></facilities>
+        <facilities>
+            <Internet>true</Internet>
+            <centralHeating>true</centralHeating>
+            <cableTv>true</cableTv>
+            <videoDVD>true</videoDVD>
+            <refrigerator>true</refrigerator>
+        </facilities>
         <personsAllowed>1</personsAllowed>
         <roomMateAllowed>false</roomMateAllowed>
         <petsAllowed>false</petsAllowed>
