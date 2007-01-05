@@ -4,6 +4,7 @@
 
     <xs:complexType name="personsType">
         <xs:sequence>
+            <xs:element name="photo" type="xs:anyURI"/>
             <xs:element name="title" type="typeTitle"/>
             <xs:element name="fullName" type="typeFullName"/>
             <xs:element name="gender" type="typeGender"/>

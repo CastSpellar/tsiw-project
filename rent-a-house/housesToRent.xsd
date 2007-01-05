@@ -37,7 +37,7 @@
                             <xs:element name="duration" type="xs:int"/>
                             <xs:element name="others"/>
                             <xs:element name="comments"/>
-                            <xs:element name="picture"/>
+                            <xs:element name="photo" type="xs:anyURI"/>
                         </xs:sequence>
                         <xs:attribute name="reference" use="required" type="xs:ID"/>
                     </xs:complexType>
