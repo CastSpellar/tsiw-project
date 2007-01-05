@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<houses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="file:/C:/workspace/rent-a-house/houses.xsd">
+    <house>
+        <reference>01</reference>
+        <location>
+            <country>Portugal</country>
+            <region>Lisboa</region>
+            <city>Lisboa</city>
+            <district>Benfica</district>
+            <comments>Perto do Estádio da Luz</comments>
+        </location>
+        <situation>Center</situation>
+        <condition>Good</condition>
+        <type>Flat</type>
+        <area>20</area>
+        <rooms>
+            <room>
+                <area>10</area>
+                <beds numberBeds="2">
+                    <bedType>Cabin</bedType>
+                </beds>
+                <bathRoom>
+                    <toilet>true</toilet>
+                </bathRoom>
+                <roomFurniture>
+                    <wardrobe number="2"/>
+                </roomFurniture>
+                <roomFacilities>
+                    <Internet>true</Internet>
+                    <airCondition>true</airCondition>
+                    <balconyTerrace>true</balconyTerrace>
+                </roomFacilities>
+            </room>
+        </rooms>
+        <facilities></facilities>
+        <personsAllowed>1</personsAllowed>
+        <roomMateAllowed>false</roomMateAllowed>
+        <petsAllowed>false</petsAllowed>
+        <childrenAllowed>false</childrenAllowed>
+        <smokingAllowed>false</smokingAllowed>
+        <livingRoom>true</livingRoom>
+        <comunityOptions>
+            <Supermarket>true</Supermarket>
+           <CoffeShop>true</CoffeShop>
+        </comunityOptions>
+        <transportOptions>
+            <BUS>true</BUS>
+            <subway_Metro>false</subway_Metro>
+            <train>true</train>
+        </transportOptions>
+        <furniture>true</furniture>
+        <deposit>100</deposit>
+        <price>200</price>
+        <availability>
+            <from>2007-01-01</from>
+            <to>2007-12-01</to>
+        </availability>
+        <duration>6</duration>
+        <others></others>
+        <comments>A casa é muita gira.</comments>
+        <picture></picture>
+    </house>
+</houses>

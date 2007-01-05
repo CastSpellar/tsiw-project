@@ -18,6 +18,22 @@
             <xs:element name="balconyTerrace" type="xs:boolean" minOccurs="0"/>
             <xs:element name="cableTv" type="xs:boolean" minOccurs="0"/>
             <xs:element name="videoDVD" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="refrigerator" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="TVs" type="typeTV" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
+    
+    <xs:complexType name="typeTV">
+        <xs:sequence>
+            <xs:element name="TV" type="typeTypeTV" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="typeTypeTV">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="TV"/>
+            <xs:enumeration value="Plasma"/>
+            <xs:enumeration value="LCD"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>

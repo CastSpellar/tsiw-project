@@ -3,6 +3,7 @@
 
     <xs:include schemaLocation="bathRooms.xsd"/>
     <xs:include schemaLocation="furniture.xsd"/>
+    <xs:include schemaLocation="facilities.xsd"/>
  
     <xs:element name="rooms">
         <xs:complexType>
@@ -21,6 +22,7 @@
                             <xs:element name="beds" type="typeBed"/>
                             <xs:element name="bathRoom" type="typeBathFacilities" minOccurs="0"/>
                             <xs:element name="roomFurniture" type="typeFurniture"/>
+                            <xs:element name="roomFacilities" type="typeFacilities" minOccurs="0" maxOccurs="unbounded"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -29,9 +31,9 @@
 
     <xs:complexType name="typeBed">
         <xs:sequence>
-            <xs:element name="numberBeds" type="xs:int"/>
             <xs:element name="bedType" type="typeTypeBed" maxOccurs="unbounded"></xs:element>
         </xs:sequence>
+        <xs:attribute name="numberBeds" type="xs:int"/>
     </xs:complexType>
     
     <xs:simpleType name="typeTypeBed">
