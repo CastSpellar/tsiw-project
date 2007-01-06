@@ -12,8 +12,8 @@
     <xs:complexType name="typeKitchen">
         <xs:sequence>
             <xs:element name="area" type="xs:int"/>
-            <xs:element name="furniture" type="xs:int"/>
-            <xs:element name="housewares" ></xs:element>
+            <xs:element name="furniture" type="xs:int" minOccurs="0"/>
+            <xs:element name="housewares" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>

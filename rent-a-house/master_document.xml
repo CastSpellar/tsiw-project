@@ -8,33 +8,32 @@
         
         <!-- Menu: -->
         <menu>
+        <item>
+            <label>
+                <translation lang="en">Home</translation>
+                <translation lang="pt">Inicio</translation>
+            </label>
+            <page id="home" alias="index front fp frontpage" src="index"/>
+        </item>
+        <item>
+            <label>
+                <translation lang="en">Solutions</translation>
+                <translation lang="pt">Soluções</translation>
+            </label>
+            <page id="solutions" src="solutions/intro_solutions"/>
             <item>
                 <label>
-                    <translation lang="en">Home</translation>
-                    <translation lang="pt">Inicio</translation>
+                    <translation lang="en">Life</translation>
+                    <translation lang="pt">Vida</translation>
                 </label>
-                <page id="home" alias="index front fp frontpage" src="index"/>
+                <page id="life" src="solutions/life"/>
+                <page id="fbplus" alias="foobar_plus fb+ foobar+" src="solutions/foobar_plus"/>
+                <page id="fbminus" src="solutions/foobar_minus"/>
             </item>
-            <item>
-                <label>
-                    <translation lang="en">Solutions</translation>
-                    <translation lang="pt">Soluções</translation>
-                </label>
-                <page id="solutions" src="solutions/intro_solutions"/>
-                <item>
-                    <label>
-                        <translation lang="en">Life</translation>
-                        <translation lang="pt">Vida</translation>
-                    </label>
-                    <page id="life" src="solutions/life"/>
-                    <page id="fbplus" alias="foobar_plus fb+ foobar+"
-                        src="solutions/foobar_plus"/>
-                    <page id="fbminus" src="solutions/foobar_minus"/>
-                </item>
-                <page id="universe" src="solutions/universe"/>
-                <page id="everything" src="solutions/everything"/>
-            </item>
-            <item>
+            <page id="universe" src="solutions/universe"/>
+            <page id="everything" src="solutions/everything"/>
+        </item>
+         <item>
                 <label>
                     <translation lang="en">Our team</translation>
                     <translation lang="pt">Equipa</translation>
@@ -43,14 +42,14 @@
                 <page id="history" src="team/history"/>
                 <page id="hire" src="team/hire"/>
             </item>
-            <item>
-                <label>
-                    <translation lang="en">Contact</translation>
-                    <translation lang="pt">Contacto</translation>
-                </label>
-                <page id="contact" src="contact/contact"/>
-                <page id="map" src="contact/map"/>
-            </item>
+        <item>
+            <label>
+                <translation lang="en">Contact</translation>
+                <translation lang="pt">Contacto</translation>
+            </label>
+            <page id="contact" src="contact/contact"/>
+            <page id="map" src="contact/map"/>
+        </item>
         </menu>
         
         <!-- Orthogonal and dynamic blocks: -->
