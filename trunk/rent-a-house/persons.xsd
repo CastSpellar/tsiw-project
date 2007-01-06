@@ -4,7 +4,7 @@
 
     <xs:complexType name="personsType">
         <xs:sequence>
-            <xs:element name="photo" type="xs:anyURI"/>
+            <xs:element name="photo" type="typePhoto"/>
             <xs:element name="title" type="typeTitle"/>
             <xs:element name="fullName" type="typeFullName"/>
             <xs:element name="gender" type="typeGender"/>
@@ -99,5 +99,13 @@
             <xs:enumeration value="Economics"/>
         </xs:restriction>
     </xs:simpleType>
+    
+    <xs:complexType name="typePhoto">
+        <xs:sequence>
+            <xs:element name="src" type="xs:anyURI"/>
+            <xs:element name="width" type="xs:int"/>
+            <xs:element name="height" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
     
 </xs:schema>

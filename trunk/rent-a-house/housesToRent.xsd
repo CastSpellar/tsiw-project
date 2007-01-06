@@ -37,7 +37,7 @@
                             <xs:element name="duration" type="xs:int"/>
                             <xs:element name="others"/>
                             <xs:element name="comments"/>
-                            <xs:element name="photo" type="xs:anyURI"/>
+                            <xs:element name="photo" type="typePhoto"/>
                         </xs:sequence>
                         <xs:attribute name="reference" use="required" type="xs:ID"/>
                     </xs:complexType>
@@ -127,5 +127,13 @@
             <xs:element name="house" type="typeHouses"/>
             <xs:element name="rooms" type="typeRoom"/>
         </xs:choice>
+    </xs:complexType>
+    
+    <xs:complexType name="typePhoto">
+        <xs:sequence>
+            <xs:element name="src" type="xs:string"/>
+            <xs:element name="width" type="xs:int"/>
+            <xs:element name="height" type="xs:int"/>
+        </xs:sequence>
     </xs:complexType>
 </xs:schema>
