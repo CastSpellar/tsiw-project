@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <xs:element name="furnitures" type="typeFurniture"/>
+
+    <xs:complexType name="typeFurniture">
+        <xs:sequence>
+            <xs:element name="wardrobe" type="typeWardrobe" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="typeWardrobe">
+        <xs:attribute use="required" name="number"/>
+    </xs:complexType>
+    
+</xs:schema>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<housesToRent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  <house reference="idvalue0">
+    <location>
+      <country>Portugal</country>
+      <region>Centro</region>
+      <city>Lisboa</city>
+      <district>Benfica</district>
+      <comments>comments</comments>
+    </location>
+    <situation>Center</situation>
+    <condition>Good</condition>
+    <area>100</area>
+    <type>
+      <flat>
+        <T1 reference="A-1">
+          <rooms>
+            <room>
+              <area>20</area>
+              <beds>
+                <bedType>Couple</bedType>
+              </beds>
+              <roomFurniture>
+                <wardrobe number="1"/>
+              </roomFurniture>
+            </room>
+          </rooms>
+          <kitchen>
+            <area>20</area>
+            <furniture>1 </furniture>
+            <housewares/>
+          </kitchen>
+          <bathroom>
+            <area>10</area>
+            <bathFacilities>
+              <bathing-tub>true</bathing-tub>
+            </bathFacilities>
+          </bathroom>
+          <livingRoom>
+            <area>30</area>
+            <furniture>
+              <wardrobe number="1"/>
+            </furniture>
+            <facilities>
+              <cableTv>true</cableTv>
+              <TVs>
+                <TV>LCD</TV>
+              </TVs>
+            </facilities>
+          </livingRoom>
+        </T1>
+      </flat>
+    </type>
+    <facilities><centralHeating>true</centralHeating> </facilities>
+    <comunityOptions>
+      <Forest>true</Forest>
+    </comunityOptions>
+    <transportOptions>
+      <BUS>true</BUS>
+      <subway_Metro>true</subway_Metro>
+      <train>true</train>
+    </transportOptions>
+    <furniture>true</furniture>
+    <deposit>100</deposit>
+    <price>200</price>
+    <availability>
+      <from>2001-01-01</from>
+      <to>2001-06-01</to>
+    </availability>
+    <duration>12</duration>
+    <others/>
+    <comments/>
+    <photo>
+      <src>src</src>
+      <width>0</width>
+      <height>0</height>
+    </photo>
+  </house>
+</housesToRent>
