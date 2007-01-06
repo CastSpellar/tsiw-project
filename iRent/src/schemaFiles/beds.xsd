@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:complexType name="typeBeds">
+        <xs:sequence>
+            <xs:element name="bed" type="typeTypeBeds" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="typeTypeBeds">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="single"/>
+            <xs:enumeration value="couple"/>
+            <xs:enumeration value="cabin"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="facilities.xsd"/>
+    <xs:include schemaLocation="furniture.xsd"/>
+    
+    <xs:element name="livingRooms">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="livingRoom" type="typeLivingRoom">
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="typeLivingRoom">
+        <xs:sequence>
+            <xs:element name="area" type="xs:int"/>
+            <xs:element name="furniture" type="typeFurniture"/>
+            <xs:element name="facilities" type="typeFacilities"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

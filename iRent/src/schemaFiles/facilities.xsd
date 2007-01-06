@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="facilities" type="typeFacilities"/>
+    
+    <xs:complexType name="typeFacilities">
+        <xs:sequence>
+            <xs:element name="Internet" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="washingMachine" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="dishesMachine" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="microWave" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="stereo" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="dryier" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="centralHeating" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="vacuumCleaner" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="airCondition" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="computer" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="balconyTerrace" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="cableTv" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="videoDVD" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="refrigerator" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="TVs" type="typeTV" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="typeTV">
+        <xs:sequence>
+            <xs:element name="TV" type="typeTypeTV" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="typeTypeTV">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="TV"/>
+            <xs:enumeration value="Plasma"/>
+            <xs:enumeration value="LCD"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
