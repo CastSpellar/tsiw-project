@@ -29,7 +29,7 @@ public class StoreExample {
         // try to get collection
         Collection col = DatabaseManager.getCollection(URI + collection);
         
-        if(col != null) {
+        //if(col != null) {
             // collection does not exist: get root collection and create
             // for simplicity, we assume that the new collection is a
             // direct child of the root collection, e.g. /db/test.
@@ -39,7 +39,7 @@ public class StoreExample {
                 root.getService("CollectionManagementService", "1.0");
             col = mgtService.createCollection(collection);
             System.out.println("Entrei na criação");
-        }
+        //}
         // create new XMLResource; an id will be assigned to the new resource
         
         File f = new File(file);
