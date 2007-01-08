@@ -1,5 +1,6 @@
 package eXistPackage;
 
+import java.io.Serializable;
 import java.util.Hashtable;
 import java.util.Vector;
 
@@ -24,13 +25,13 @@ public class Retrieve {
 	    XmlRpc.setEncoding("UTF-8");
 	    XmlRpcClient xmlrpc = new XmlRpcClient( uri );
 	    xmlrpc.setBasicAuthentication("admin", "keyword");
-	    Hashtable options = new Hashtable();
+	    Hashtable<String, String> options = new Hashtable<String, String>();
 	    options.put("indent", "yes");
 	    options.put("encoding", "UTF-8");
 	    options.put("expand-xincludes", "yes");
 	    options.put("highlight-matches", "elements");
 	    
-	    Vector params = new Vector();
+	    Vector<Serializable> params = new Vector<Serializable>();
 	    params.addElement( args[0] ); 
 	    params.addElement( options );
 	    String xml = (String)
