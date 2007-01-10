@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE site [
+  <!ENTITY auml "&#228;">
+  <!ENTITY ouml "&#246;">
+  <!ENTITY uuml "&#252;">
+]>
+<site>
+
+  <!-- Environments: -->
+  <environment id="local">
+    <os>Windows</os>
+    <src-path>file:/C:/Work/Website/XML/</src-path>
+    <out-path>file:/C:/Work/Website/Out/</out-path>
+    <target-path>file:/C:/Work/Website/Out/</target-path>
+    <img-path>Images</img-path>
+  </environment>
+  <environment id="staging">
+    <os>Linux</os>
+    <src-path>/home/d/web/</src-path>
+    <out-path>/home/d/web/out/</out-path>
+    <target-path>/</target-path>
+    <img-path>img</img-path>
+  </environment>
+  <environment id="final">
+    <os>BSD</os>
+    <src-path>/var/tomcat/webapps/cocoon/foobar/</src-path>
+    <out-path>/var/tomcat/webapps/cocoon/foobar/</out-path>
+    <target-path>/cocoon/foobar/</target-path>
+    <img-path>img</img-path>
+  </environment>
+
+  <!-- Languages: -->
+  <languages>
+    <lang>en</lang>
+    <lang>de</lang>
+  </languages>
+
+  <!-- Menu: -->
+  <menu>
+    <item>
+      <label>
+        <translation lang="en">Home</translation>
+        <translation lang="de">Home</translation>
+      </label>
+      <page id="home" alias="index front fp frontpage" src="index"/> 
+    </item> 
+    <item>
+      <label> 
+        <translation lang="en">Solutions</translation>
+        <translation lang="de">L&ouml;sungen</translation>
+      </label> 
+      <page id="solutions" src="solutions/intro_solutions"/>
+      <item>
+        <label> 
+          <translation lang="en">Life</translation>
+          <translation lang="de">Das Leben</translation>
+        </label> 
+        <page id="life" src="solutions/life"/>
+        <page id="fbplus" alias="foobar_plus fb+ foobar+" 
+              src="solutions/foobar_plus"/>
+        <page id="fbminus" src="solutions/foobar_minus"/>
+      </item>
+      <page id="universe" src="solutions/universe"/>
+      <page id="everything" src="solutions/everything"/>
+    </item> 
+    <item>
+      <label>
+        <translation lang="en">Our team</translation>
+        <translation lang="de">Unser Team</translation>
+      </label>
+      <page id="team" src="team/index"/>
+      <page id="history" src="team/history"/>      
+      <page id="hire" src="team/hire"/>      
+    </item>   
+    <item>
+      <label>
+        <translation lang="en">Contact</translation>
+        <translation lang="de">Kontakt</translation>
+      </label>
+      <page id="contact" src="contact/contact"/>
+      <page id="map" src="contact/map"/>
+    </item> 
+  </menu>
+
+  <!-- Orthogonal and dynamic blocks: -->
+  <blocks>
+    <!-- Extract the 'summary' block from the product page: -->
+    <block id="feature" src="solutions/foobar_plus" 
+           select="summary"/>
+    <!-- Extract the 'last' block from the front page: -->
+    <block id="news" src="index" select="last"/>
+    <!-- Take the entire subscribe.xml: -->
+    <block id="subscribe" src="subscribe"/>
+    <!-- Run site map generation: -->
+    <block-process id="sitemap" process="sitemap" 
+                                mode="text" depth="2"/>
+    <!-- Run list-titles on all files in news/: -->
+    <block-process id="news-list" process="list-titles" 
+                                  dir="news/"/>
+  </blocks>
+
+  <!-- The common part of the page titles: -->
+  <html-title>
+    <translation lang="en">Foobar Corporation AG</translation>
+    <translation lang="de">Foobar Corporation AG</translation>
+  </html-title>
+
+  <!-- Page footer content: -->
+  <page-footer>
+    <copyright>
+      <translation lang="en">&#169; 2003 by Foobar Corporation AG. 
+        All rights reserved.</translation>
+      <translation lang="de">&#169; 2003 by Foobar Corporation AG. 
+        All rights reserved.</translation>
+    </copyright>
+    <language-switch>
+      <translation lang="en">
+        <lang link="de">Diese Seite in deutsch</lang>
+      </translation>
+      <translation lang="de">
+        <lang link="en">This page in English</lang>
+      </translation>
+    </language-switch>
+    <contact-webmaster>
+      <translation lang="en">
+        Problems using this site? Contact the 
+        <mailto link="webmaster@foobar.com">Webmaster</mailto>.
+      </translation>
+      <translation lang="de">
+        Probleme mit dieser Web-Site? Kontaktieren Sie bitte unseren 
+        <mailto link="webmaster@foobar.com">Webmaster</mailto>.
+      </translation>
+    </contact-webmaster>
+  </page-footer>
+
+  <!-- Sequence navigation buttons: -->
+  <buttons>
+    <button id="prev">
+      <translation lang="en">prev</translation>
+      <translation lang="de">zur&uuml;ck</translation>
+    </button>
+    <button id="next">
+      <translation lang="en">next</translation>
+      <translation lang="de">vorw&auml;rts</translation>
+    </button>
+  </buttons>
+
+</site>

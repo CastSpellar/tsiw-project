@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="con" path="com.genuitec.eclipse.j2eedt.core.J2EE14_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Programas/eXist/lib/core/xmldb.jar"/>
-	<classpathentry kind="lib" path="C:/Programas/eXist/exist.jar"/>
-	<classpathentry kind="lib" path="C:/Programas/eXist/lib/core/log4j-1.2.14.jar"/>
-	<classpathentry kind="lib" path="C:/Programas/eXist/lib/core/xmlrpc-1.2-patched.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="com.genuitec.eclipse.j2eedt.core.J2EE14_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="C:/Programas/Apache Software Foundation/Tomcat 6.0/webapps/exist/WEB-INF/lib/xmldb.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Programas/Apache Software Foundation/Tomcat 6.0/webapps/exist/WEB-INF/lib/exist.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Programas/Apache Software Foundation/Tomcat 6.0/webapps/exist/WEB-INF/lib/log4j-1.2.14.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Programas/Apache Software Foundation/Tomcat 6.0/webapps/exist/WEB-INF/lib/xmlrpc-1.2-patched.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

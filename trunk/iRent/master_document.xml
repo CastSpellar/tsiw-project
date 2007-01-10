@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<site>         
+        <!-- Languages: -->
+        <languages>
+            <lang>en</lang>
+            <lang>pt</lang>
+        </languages>
+        
+        <!-- Menu: -->
+        <menu>
+        <item>
+            <label>
+                <translation lang="en">Home</translation>
+                <translation lang="pt">Inicio</translation>
+            </label>
+            <page id="home" alias="index front fp frontpage" src="index"/>
+        </item>
+        <item>
+            <label>
+                <translation lang="en">Houses</translation>
+                <translation lang="pt">Casas</translation>
+            </label>
+            <page id="houses" src="houses/houses"/>
+        </item>
+         <item>
+                <label>
+                    <translation lang="en">About Us</translation>
+                    <translation lang="pt">Quem Somos</translation>
+                </label>
+                <page id="about" src="about/us"/>
+         </item>
+        <item>
+            <label>
+                <translation lang="en">Contact</translation>
+                <translation lang="pt">Contacto</translation>
+            </label>
+            <page id="contact" src="contact/contact"/>
+            <page id="map" src="contact/map"/>
+        </item>
+        </menu>
+        
+        <!-- TODO -->
+        <!-- Orthogonal and dynamic blocks: -->
+        <blocks>
+            <!-- Extract the 'summary' block from the product page: -->
+            <block id="feature" src="solutions/foobar_plus" select="summary"/>
+            <!-- Extract the 'last' block from the front page: -->
+            <block id="news" src="index" select="last"/>
+            <!-- Take the entire subscribe.xml: -->
+            <block id="subscribe" src="subscribe"/>
+            <!-- Run site map generation: -->
+            <block-process id="sitemap" process="sitemap" mode="text" depth="2"/>
+            <!-- Run list-titles on all files in news/: -->
+            <block-process id="news-list" process="list-titles" dir="news/"/>
+        </blocks>
+        
+        <!-- The common part of the page titles: -->
+        <html-title>
+            <translation lang="en">iRent</translation>
+            <translation lang="pt">iRent</translation>
+        </html-title>
+        
+        <!-- Page footer content: -->
+        <page-footer>
+            <copyright>
+                <translation lang="en">2007 by Tiago Antao and Tiago Clemente.
+                                                All rights reserved.</translation>
+                <translation lang="pt">2007 por Tiago Antao e Tiago Clemente.
+                                                Todos os direitos reservados.</translation>
+            </copyright>
+            
+            <language-switch>
+                <translation lang="en">
+                    <lang link="pt">
+                        Este site em Português</lang>
+                </translation>
+                <translation lang="pt">
+                    <lang link="en">
+                        This page in English</lang>
+                </translation>
+            </language-switch>
+            
+            <contact-webmaster>
+                <translation lang="en">Problems using this site? Contact the
+                    <mailto link="webmaster@xml.com">Webmaster</mailto>.
+                </translation>
+                <translation lang="de">Problemas com este Web-Site? Contacte o 
+                    <mailto link="webmaster@foobar.com">Webmaster</mailto>.
+                </translation>
+            </contact-webmaster>
+        </page-footer>
+        
+        <!-- Sequence navigation buttons: -->
+        <buttons>
+            <button id="prev">
+                <translation lang="en">prev</translation>
+                <translation lang="pt">anterior</translation>
+            </button>
+            <button id="next">
+                <translation lang="en">next</translation>
+                <translation lang="pt">próximo</translation>
+            </button>
+        </buttons>
+</site>    
