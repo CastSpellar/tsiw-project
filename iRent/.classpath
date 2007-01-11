@@ -7,5 +7,6 @@
 	<classpathentry exported="true" kind="lib" path="C:/Programas/Apache Software Foundation/Tomcat 6.0/webapps/exist/WEB-INF/lib/exist.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Programas/Apache Software Foundation/Tomcat 6.0/webapps/exist/WEB-INF/lib/log4j-1.2.14.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Programas/Apache Software Foundation/Tomcat 6.0/webapps/exist/WEB-INF/lib/xmlrpc-1.2-patched.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Programas/Apache Software Foundation/Tomcat 6.0/webapps/exist/WEB-INF/lib/xercesImpl.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>
