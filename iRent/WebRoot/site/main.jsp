@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>iLogin</title>
+<title>Home</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" />
@@ -11,25 +11,6 @@
 <div id="wrapper">
 	<div id="content">
 		<div id="colOne">
-			<form name="login" action="login.php" method="post">
-				<table cellpadding="10" cellspacing="0" border="1">
-					<tr>
-						<td>User Name </td>
-						<td><input type="text" name="user" /></td>
-						</tr>
-				
-						<tr>
-						<td>Password</td>
-						<td><input type="password" name="pass" /></td>
-						</tr>
-				
-						<tr>
-							<td colspan="2" align="right">
-							<input type="submit" value="Login">
-						</td>
-					</tr>
-			</table>
-			</form>
 		</div>
 		<div id="colTwo">
 		</div>
