@@ -1,5 +1,5 @@
 package eXistPackage;
 
-public class LoadDBFile {
+public class dbSet {
 
 }
