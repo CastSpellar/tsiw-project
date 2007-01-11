@@ -57,7 +57,7 @@
 	
 	//Initialise variables:
 	msg="Parse Successful!";
-	routeURL = "default.htm";
+	routeURL = "main.jsp";
 	
 //Read XML file
 
