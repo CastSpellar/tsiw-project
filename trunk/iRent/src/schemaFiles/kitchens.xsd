@@ -13,7 +13,7 @@
         <xs:sequence>
             <xs:element name="area" type="xs:int"/>
             <xs:element name="furniture" type="xs:int" minOccurs="0"/>
-            <xs:element name="housewares" minOccurs="0"/>
+            <xs:element name="housewares" minOccurs="0" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>

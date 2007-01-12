@@ -35,8 +35,8 @@
                             <xs:element name="price" type="xs:int"/>
                             <xs:element name="availability" type="typeDuration"/>
                             <xs:element name="duration" type="xs:int"/>
-                            <xs:element name="others"/>
-                            <xs:element name="comments"/>
+                            <xs:element name="others" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+                            <xs:element name="comments" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
                             <xs:element name="photo" type="typePhoto"/>
                         </xs:sequence>
                         <xs:attribute name="reference" use="required" type="xs:ID"/>

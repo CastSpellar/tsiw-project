@@ -1,3 +1,6 @@
+<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<jsp:useBean id="dbGet" scope="session" class="eXistPackage.dbGet" />
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -11,6 +14,9 @@
 <div id="wrapper">
 	<div id="content">
 		<div id="colOne">
+			<blockquote>
+				<%=dbGet.getXML("/db/","examples.xml") %>
+			</blockquote>			
 		</div>
 		<div id="colTwo">
 		</div>
