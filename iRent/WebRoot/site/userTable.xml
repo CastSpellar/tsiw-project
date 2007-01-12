@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<userTable> 
-  <user userID="Joe" pwd="Soap" profession="researcher" level="user"> Joe </user> 
-  <user userID="Dude" pwd="Dude" profession="developer" level="user"> Some Dude </user> 
-</userTable>
-
