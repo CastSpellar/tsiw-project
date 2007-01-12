@@ -1,5 +1,3 @@
-//Page Directives
-
 <%@ page language="java" %>
 <%@ page import="javax.xml.parsers.*" %>
 <%@ page import="org.w3c.dom.Document" %>
@@ -8,16 +6,11 @@
 <%@ page import="java.net.URL" %>
 <%@ page import="java.io.InputStream" %>
 <%@ page import="java.io.IOException" %>
-
-
-//Page Variables
-
-<%! String fileRoot = "e:/www/testpro/";%>
-<%! String root = "http://your_site/testpro/";%>
-<%! String dataRoot = "http://your_site/testpro/data/";%>
-<%! String fileName= dataRoot + "userTable.xml";%>
+<%@ page import="org.xmldb.api.base.Resource" %>
+<%@ page import="org.xmldb.api.modules.XMLResource" %>
 
 <jsp:useBean id="logon" scope="session" class="logonBean.logon" />
+<jsp:useBean id="dbGet" scope="session" class="eXistPackage.dbGet" />
 
 <%! String msg="Parse Successful!";%>
 <%! String nodeValue="No Value";%>
@@ -26,95 +19,61 @@
 <%! String routeURL="";%>
 <%! int listLength;%>
 
-
-//HTML Header
-
-
 <html>
 <head>
 <title>processLogon</title>
 </head>
 <body>
-
-//Init Page
-
 <%
-
 	//Get page parameters:
-	if(request.getParameter("userID") != null)
-	{
+	if(request.getParameter("userID") != null){
 		userID = request.getParameter("userID");
 	}	
-
-	if(request.getParameter("pwd") != null)
-	{
+	if(request.getParameter("pwd") != null){
 		pwd = request.getParameter("pwd");
 	}	
 
-	//Declare variables
-	Document document;
-	DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-	
 	//Initialise variables:
 	msg="Parse Successful!";
-	routeURL = "main.jsp";
+	routeURL = "error.html";
 	
 //Read XML file
-
 try {
 	//Open the file for reading:
-URL u = new URL(fileName);
-	InputStream inputXML = u.openStream();
-	   
-	//Build document:
-	DocumentBuilder builder = factory.newDocumentBuilder();
-       	document = builder.parse(inputXML);
-		
+	Resource xml = dbGet.getResource("/db/iRent/users","userTable.xml");
+%> <%=xml.getContent() %> <%		
 	//Generate the NodeList;
-	org.w3c.dom.NodeList nodeList = document.getElementsByTagName("user");
-	listLength = nodeList.getLength();
-		
+	//org.w3c.dom.NodeList nodeList = document.getElementsByTagName("user");
+	org.w3c.dom.NodeList nodeList = (((XMLResource) xml.getContent()).getContentAsDOM()).getChildNodes();
+	listLength = nodeList.getLength();	
 
-//Search for User's Record
-
+	//Search for User's Record
 	outer:
 
 	for (int i=0; i<nodeList.getLength(); i++) 
 	{
-		org.w3c.dom.Node curNode = nodeList.item(i);	
-
-		//Get userID attribute:
+		org.w3c.dom.Node curNode = nodeList.item(i);
+		
 					Element curElm = (Element)nodeList.item(i);
 					String curUserID = curElm.getAttribute("userID");
 
-		//Get pwd attribute:
 		String curPwd = curElm.getAttribute("pwd");
-
 
 		if (curUserID.equals(userID) && curPwd.equals(pwd))
 		{
-			routeURL = "frame.htm";
+			routeURL = "main.jsp";
 			logon.setUserID(userID);
 			logon.setSecure();
 			break outer;
-		} //end if
-	}//end for				
-
-
-
-//Exception Handling
-
+		} 
+	}
+	
 }catch(Exception e)
 {
 msg = msg + e.toString();
-}
-
-	
+}	
 %>
 
-//Page Routing
-
-<script language="javascript">setTimeout("document.location='<%=routeURL%>'",100)</script>
 
 </body>
 </html>
